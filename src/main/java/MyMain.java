@@ -9,7 +9,21 @@ public class MyMain {
     // returns the largest of the three numbers
     public static int findBiggestNumber(int x, int y, int z) {
         // REPLACE THIS WITH YOUR CODE
-        return 0;
+        int a = 0;
+        int b = 0;
+        if(x>y) {
+            a = x;
+        }
+        else {
+            a = y;
+        }
+        if(a>z) {
+            b = a;
+        }
+        else {
+            b = z;
+        }
+        return (z);
     }
 
     // This method simulates the flip of a coin, where
@@ -17,7 +31,15 @@ public class MyMain {
     // This method should return true half the time, and false the other half
     public static boolean flipCoin() {
         // REPLACE THIS WITH YOUR CODE
-        return false;
+
+//        if (Math.random() >= 0.5) {
+//            return true;
+//        }
+//        else {
+//            return false;
+//        }
+
+        return (Math.random()>=0.5);
     }
 
     // This method simulates the flip of a weighted coin,
@@ -30,13 +52,20 @@ public class MyMain {
     // This method rounds a double to the nearest whole number
     public static int round(double d) {
         // REPLACE THIS WITH YOUR CODE
-        return 0;
+        int f = (int)d;
+        double a = d -f;
+        if ( a >= 0.5 ) {
+            return(f + 1);
+        }
+        else {
+            return(f);
+        }
     }
 
     // This method returns a random number between 1 and 6, inclusive
     public static int rollDie() {
         // REPLACE THIS WITH YOUR CODE
-        return 0;
+        return (int) (Math.random() * 6) + 1;
     }
 
     // This method carries out the quadratic formula and *prints* out the answers
@@ -51,5 +80,7 @@ public class MyMain {
         System.out.println(y);
 
         // YOUR CODE HERE
+        System.out.println(round(4.4));
+        System.out.println(rollDie());
     }
 }
